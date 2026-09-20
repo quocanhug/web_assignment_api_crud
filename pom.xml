@@ -66,7 +66,12 @@
 			<version>2.11.0</version>
 		</dependency>
 
-		<!-- Swagger 3 (Springdoc OpenAPI) -->
+		<!-- Swagger 3 -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>3.0.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
