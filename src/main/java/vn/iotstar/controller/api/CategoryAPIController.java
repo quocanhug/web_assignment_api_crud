@@ -35,9 +35,7 @@ public class CategoryAPIController {
 
 	@GetMapping
 	public ResponseEntity<?> getAllCategory() {
-		return new ResponseEntity<Response>(
-				new Response(true, "Thành công", categoryService.findAll()),
-				HttpStatus.OK);
+		return ResponseEntity.ok().body(categoryService.findAll());
 	}
 
 	@GetMapping(path = "/{id}")
@@ -145,9 +143,7 @@ public class CategoryAPIController {
 					HttpStatus.BAD_REQUEST);
 		} else {
 			categoryService.delete(optCategory.get());
-			return new ResponseEntity<Response>(
-					new Response(true, "Xóa Thành công", optCategory.get()),
-					HttpStatus.OK);
+			return ResponseEntity.ok().body(optCategory.get());
 		}
 	}
 

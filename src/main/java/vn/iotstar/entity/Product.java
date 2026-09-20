@@ -41,10 +41,10 @@ public class Product implements Serializable {
 	private String productName;
 
 	@Column(nullable = false)
-	private int quantity;
+	private Integer quantity;
 
 	@Column(name = "price", nullable = false)
-	private double unitPrice;
+	private Double unitPrice;
 
 	@Column(name = "image", length = 200)
 	private String images;
@@ -53,7 +53,7 @@ public class Product implements Serializable {
 	private String description;
 
 	@Column(nullable = false)
-	private double discount;
+	private Double discount;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -61,7 +61,7 @@ public class Product implements Serializable {
 	private Date createDate;
 
 	@Column(nullable = false)
-	private short status;
+	private Short status;
 
 	@JsonIgnore
 	@ToString.Exclude
